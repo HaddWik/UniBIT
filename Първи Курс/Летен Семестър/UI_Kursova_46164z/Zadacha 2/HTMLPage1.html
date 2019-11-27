@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Task_2</title>
+    <script>
+        function calculate() {
+            var a = Number(document.getElementById("inputA").value);
+            var b = Number(document.getElementById("inputB").value);
+            var sel = document.getElementById("selection");
+            var selection = sel.options[sel.selectedIndex].value;
+            var result = 0;
+
+            if (isNaN(a) || isNaN(b)) {
+                window.alert("A & B must be numbers!");
+            }
+
+            switch (selection) {
+                case "add":
+                    result = a + b;
+                    break;
+                case "less":
+                    result = a - b;
+                    break;
+                case "times":
+                    result = a * b;
+                    break;
+                case "divide":
+                    result = a / b;
+                    break;
+                case "residue":
+                    result = a % b;
+                    break;
+                case "increase":
+                    result = ++a;
+                    break;
+                case "reduce":
+                    result = --a;
+                    break;
+                default:
+                    window.alert("Please select function!");
+                    break;
+            }
+
+            document.getElementById("lbl").innerHTML = "Result: " + result;
+        }
+
+         function check() {
+            var a = document.getElementById("inputC").value;
+            var b = document.getElementById("inputD").value;
+            var sel = document.getElementById("selection2");
+            var selection = sel.options[sel.selectedIndex].value;
+            var result;
+
+            if (a == "" || b == "") {
+                window.alert("C & D cannot be empty!");
+                return;
+            }
+
+            switch (selection) {
+                case "==":
+                    result = a == b;
+                    break;
+                case "===":
+                    result = a === b;
+                    break;
+                case "!=":
+                    result = a != b;
+                    break;
+                case "!==":
+                    result = a !== b;
+                    break;
+                case ">":
+                    result = a > b;
+                    break;
+                case "<":
+                    result = a < b;
+                    break;
+                case ">=":
+                    result = a >= b;
+                    break;
+                case "<=":
+                    result = a <= b;
+                    break;
+                default:
+                    window.alert("Please select function!");
+                    break;
+            }
+
+            document.getElementById("lbl2").innerHTML = "Result: " + result;
+        }
+    </script>
+</head>
+<body>
+    <h2>Arithmetic Operators</h2>
+    A: <input id="inputA" type="text" value="" placeholder="Enter value" width="200" height="50" />
+    B: <input id="inputB" type="text" value="" placeholder="Enter value" width="200" height="50" />
+    Operator:
+    <select id="selection">
+        <option value="select" selected="true" disabled="disabled">Select</option>
+        <option value="add" id="add">+</option>
+        <option value="less" id="less">-</option>
+        <option value="times" id="times">*</option>
+        <option value="divide" id="divide">/</option>
+        <option value="residue" id="residue">%</option>
+        <option value="increase" id="increase">++</option>
+        <option value="reduce" id="reduce">--</option>
+    </select>
+    <button onclick="calculate()">Calculate</button>
+    <label id="lbl">Result: </label>
+    <hr />
+    <h2>Equality Operators</h2>
+    C: <input id="inputC" type="text" value="" placeholder="Enter value" width="200" height="50" />
+    D: <input id="inputD" type="text" value="" placeholder="Enter value" width="200" height="50" />
+    Operator:
+       <select id="selection2">
+           <option value="select" selected="true" disabled="disabled">Select</option>
+           <option value="==" id="==">==</option>
+           <option value="===" id="===">===</option>
+           <option value="!=" id="!=">!=</option>
+           <option value="!==" id="!==">!==</option>
+           <option value=">" id=">">></option>
+           <option value="<" id="<"><</option>
+           <option value=">=" id=">=">>=</option>
+           <option value="<=" id="<="><=</option>
+       </select>
+    <button onclick="check()">Check</button>
+    <label id="lbl2">Result: </label>
+</body>
+</html>

@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Task_1</title>
+    <script src="file.js"></script>
+</head>
+<body>
+    <h2>Quotes</h2>
+    <h3 id="hh1"></h3>
+    <h3 id="hh2"></h3>
+    <h3 id="hh3"></h3>
+    <h3 id="hh4"></h3>
+    <h3 id="hh5"></h3>
+    <br />
+
+    <h2>More Quotes</h2>
+    <p id="pp1"></p>
+    <p id="pp2"></p>
+    <p id="pp3"></p>
+    <p id="pp4"></p>
+    <p id="pp5"></p>
+    <button id="btn1" onclick="loadQuotes()">Load 5 more quotes</button>
+    <br /><br /><br />
+    <button id="btn2" onclick="changeColor()">Change color on first quotes</button>
+
+    <script>
+        var text1 = "Smart phones and social media expand our universe. We can connect with others or collect information easier and faster than ever.";
+        var text2 = "Be as smart as you can, but remember that it is always better to be wise than to be smart.";
+        var text3 = "Fishing is a hard job. Fishing at night. Rain. Day, night. You have to be wise and smart. And quick.";
+        var text4 = "Being aware of your fear is smart. Overcoming it is the mark of a successful person.";
+        var text5 = "It takes a smart man to play dumb.";
+
+        document.getElementById("hh1").innerHTML = text1;
+        document.getElementById("hh2").innerHTML = text2;
+        document.getElementById("hh3").innerHTML = text3;
+        document.getElementById("hh4").innerHTML = text4;
+        document.getElementById("hh5").innerHTML = text5;
+    </script>
+</body>
+</html>

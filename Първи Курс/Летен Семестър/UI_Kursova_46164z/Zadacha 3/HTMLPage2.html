@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Task_3</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <center>
+        <img id="img" src="img/p1.jpg" width="800" height="500" />
+        <br />
+        <div id="btnContainer">
+            <button id="b1" class="button button1 active" onclick="changeImg(1)">1</button>
+            <button id="b2" class="button button1" onclick="changeImg(2)">2</button>
+            <button id="b3" class="button button1" onclick="changeImg(3)">3</button>
+            <button id="b4" class="button button1" onclick="changeImg(4)">4</button>
+            <button id="b5" class="button button1" onclick="changeImg(5)">5</button>
+        </div>
+    </center>
+
+    <script>
+        function changeImg(id) {
+            var img = document.getElementById("img");
+            var btnContainer = document.getElementById("btnContainer");
+            var btns = btnContainer.getElementsByClassName("button");
+
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].addEventListener("click", function () {
+                    var current = document.getElementsByClassName("active");
+
+                    if (current.length > 0) {
+                        current[0].className = current[0].className.replace(" active", "");
+                    }
+
+                    this.className += " active";
+              });
+            }
+
+            switch (id) {
+                case 1:
+                    img.src = "img/p1.jpg";
+                    break;
+                case 2:
+                    img.src = "img/p2.jpg";
+                    break;
+                case 3:
+                    img.src = "img/p3.jpg";
+                    break;
+                case 4:
+                    img.src = "img/p4.jpg";
+                    break;
+                case 5:
+                    img.src = "img/p5.jpg";
+                    break;
+                default:
+            }
+        }
+    </script>
+</body>
+</html>

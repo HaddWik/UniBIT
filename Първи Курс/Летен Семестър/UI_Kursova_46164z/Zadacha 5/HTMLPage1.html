@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Task_5</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Car Information Form</legend>
+        <form id="frm">
+            Car Brand: <input type="text" value="" placeholder="Enter car brand" name="carBrand" width="200" height="50" /><br /><br />
+            Car Model: <input type="text" value="" placeholder="Enter car model" name="carModel" width="200" height="50" /><br /><br />
+            Engine Type:<br />
+            Gasoline: <input type="radio" name="engineType" />
+            Diesel: <input type="radio" name="engineType" />
+            <br /><br />
+            Direction:<br />
+            <select id="direction">
+                <option value="select" selected="true" disabled="disabled">Please Select</option>
+                <option value="Left Hand Drive">Left Hand Drive</option>
+                <option value="Right Hand Drive">Right Hand Drive</option>
+            </select>
+            <br /><br />
+            Extra Features:<br />
+            <input type="checkbox" name="extra" value="Alarm" /> Alarm<br />
+            <input type="checkbox" name="extra" value="Central Locking" /> Central Locking<br />
+            <input type="checkbox" name="extra" value="CD Player" /> CD Player<br />
+            <input type="checkbox" name="extra" value="Automatic Transmission" /> Automatic Transmission<br />
+            <input type="checkbox" name="extra" value="Xenon Headlights" /> Xenon Headlights<br />
+        </form><br />
+        <input id="btn1" type="button" value="Send Data" onclick="getDataAndShow()" style="width: 250px" />
+    </fieldset>
+    <p id="result"></p>
+
+    <script>
+        var carBrand, carModel, engineType, direction, extra;
+
+        function getDataAndShow() {
+            var form = document.getElementById("frm");
+            carBrand = form.elements[0].value;
+            carModel = form.elements[1].value;
+            engineType = form.elements[2].checked ? "Gasoline" : "Diesel";
+            direction = document.getElementById("direction");
+            var selectedDirection = direction.options[direction.selectedIndex].value;
+            extra = extraFeatures(form);
+
+            showData(new Car(carBrand, carModel, engineType, selectedDirection, extra));
+        }
+
+        function extraFeatures(form) {
+            var text = "Extra Features: ";
+            var selectedFeatures = 0;
+
+            for (var i = 5; i < 10; i++) {
+                if (form.elements[i].checked) {
+                    selectedFeatures++;
+                    if (selectedFeatures == 1)
+                        text = text + " " + form.elements[i].value;
+                    else
+                        text = text + ", " + form.elements[i].value;
+                }
+            }
+
+            if (selectedFeatures > 0)
+                return text;
+            else
+                return text + "No extra features.";
+        }
+
+        function Car(carBrand, carModel, engineType, direction, extra) {
+            this.cBrand = carBrand;
+            this.cModel = carModel;
+            this.engType = engineType;
+            this.direct = direction;
+            this.extra = extra;
+        }
+
+        function showData(car) {
+            var item;
+            var text = "";
+
+            for (item in car) {
+                text = text + car[item] + "<br/>";
+            }
+
+            document.getElementById("result").innerHTML = text;
+        }
+    </script>
+</body>
+</html>
