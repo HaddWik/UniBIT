@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<carData>
+  <details>
+    <make>BMW</make>
+    <model>320d</model>
+    <licensePlate>KH5267BH</licensePlate>
+    <vin>FY68578</vin>
+  </details>
+  <service>
+    <date>15 юни 2019</date>
+    <odometer>150000</odometer>
+    <description>Смяна на масло и филтри</description>
+  </service>
+  <service>
+    <date>21 юли 2019</date>
+    <odometer>155000</odometer>
+    <description>Ремонт на турбо</description>
+  </service>
+  <service>
+    <date>5 август 2019</date>
+    <odometer>156000</odometer>
+    <description>Ремонт на ходова част - шарнири тампони носачи</description>
+  </service>
+  <service>
+    <date>10 октомври 2019</date>
+    <odometer>160000</odometer>
+    <description>Смяна на предни спирачни дискове и накладки</description>
+  </service>
+  <service>
+    <date>3 ноември 2019</date>
+    <odometer>165000</odometer>
+    <description>Смяна на масло и филтри</description>
+  </service>
+</carData>

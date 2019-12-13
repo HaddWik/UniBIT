@@ -1,0 +1,8 @@
+D:\Documents\УниБИТ\Втори Курс\Зимен Семестър\VSP-46164z\VSP-46164z-9\WindowsFormsApp10\bin\Debug\WindowsFormsApp10.exe
+D:\Documents\УниБИТ\Втори Курс\Зимен Семестър\VSP-46164z\VSP-46164z-9\WindowsFormsApp10\bin\Debug\WindowsFormsApp10.pdb
+D:\Documents\УниБИТ\Втори Курс\Зимен Семестър\VSP-46164z\VSP-46164z-9\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.csprojAssemblyReference.cache
+D:\Documents\УниБИТ\Втори Курс\Зимен Семестър\VSP-46164z\VSP-46164z-9\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.Form1.resources
+D:\Documents\УниБИТ\Втори Курс\Зимен Семестър\VSP-46164z\VSP-46164z-9\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.Properties.Resources.resources
+D:\Documents\УниБИТ\Втори Курс\Зимен Семестър\VSP-46164z\VSP-46164z-9\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.csproj.GenerateResource.cache
+D:\Documents\УниБИТ\Втори Курс\Зимен Семестър\VSP-46164z\VSP-46164z-9\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.exe
+D:\Documents\УниБИТ\Втори Курс\Зимен Семестър\VSP-46164z\VSP-46164z-9\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.pdb
